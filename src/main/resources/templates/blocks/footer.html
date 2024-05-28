@@ -1,0 +1,18 @@
+<footer class="py-3 my-4">
+    <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+        <li class="nav-item"><a href="/" class="nav-link px-2 text-body-secondary">Главная</a></li>
+        <form id="uploadForm" action="/upload" method="post" enctype="multipart/form-data">
+            <li class="nav-item">
+                <input type="file" name="document" id="fileInput" style="display: none;" onchange="uploadFile()">
+                <a href="#" class="nav-link px-2 text-body-secondary" onclick="document.getElementById('fileInput').click(); return false;">Загрузить</a>
+            </li>
+        </form>
+    </ul>
+    <p class="text-center text-body-secondary">© 2024 My Tech, Inc</p>
+
+    <script>
+        function uploadFile() {
+            document.getElementById('uploadForm').submit();
+        }
+    </script>
+</footer>
